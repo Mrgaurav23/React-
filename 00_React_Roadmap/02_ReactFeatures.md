@@ -13,13 +13,13 @@
 - `Hook State`:-
 - The useState hook is a new way to declare state in functional components. It allows you to set and retrieve state values in a component without using classes. The useState() hook returns an array containing the current state and a function to update that state.
 
-![alt text](image-2.png)
+![alt text](../00_React_Roadmap/Images/image-2.png)
 
 - 1. ### `useState`:-
 - The useState hook is one of the fundamental hooks in React. It allows you to add state to functional components, providing a way to store and manage data that may change over time. 
 
 - `Syntax`:
-- ![alt text](image-5.png)
+- ![alt text](../00_React_Roadmap/Images/image-5.png)
 
 - `state`: The current value of the state.
 - `setState`: A function that lets you update the state. When called, it triggers a re-render of the component with the updated state.
@@ -33,13 +33,13 @@
 - The useCallback hook in React is used to memoize functions, allowing you to optimize your components by preventing unnecessary re-creations of functions. This can be particularly useful when passing functions as props to child components, as it helps avoid triggering unnecessary re-renders.
 
 - `Syntax`:
-- ![alt text](image-7.png)
-- ![alt text](image-6.png)
+- ![alt text](../00_React_Roadmap/Images/image-7.png)
+- ![alt text](../00_React_Roadmap/Images/image-6.png)
 
 - `memoizedCallback`: The function that will be memoized.
 - `dependencies`: An array of dependencies that the function depends on. The memoized function will only be re-created if one of these dependencies changes.
 
-- ![alt text](image-8.png)
+- ![alt text](../00_React_Roadmap/Images/image-8.png)
 
 - The `useCallback` hook can be a powerful tool to optimize React apps, especially when used thoughtfully to avoid unnecessary re-renders of components.
 
@@ -49,8 +49,8 @@
 - The useEffect hook in React is used to perform side effects in functional components. These side effects can include tasks like data fetching, direct DOM manipulation, setting up subscriptions, and cleaning up resources. useEffect replaces lifecycle methods like componentDidMount, componentDidUpdate, and componentWillUnmount found in class components.
 
 `Syntax`:
-- ![alt text](image-9.png)
-- ![alt text](image-10.png)
+- ![alt text](../00_React_Roadmap/Images/image-9.png)
+- ![alt text](../00_React_Roadmap/Images/image-10.png)
 
 - `Callback Function`: This function contains the side effect code. It runs after the component renders.
 - `Cleanup Function` (Optional): If you return a function from useEffect, it will run when the component unmounts or before the effect is re-executed.
@@ -63,9 +63,9 @@
 - The useRef hook in React provides a way to create a persistent reference to a value that doesn't trigger a re-render when it changes. This hook is commonly used to store references to DOM elements and maintain mutable values across renders.
 
 - `Syntax` :- 
-- ![alt text](image-11.png)
-- ![alt text](image-12.png)
-- ![alt text](image-13.png)
+- ![alt text](../00_React_Roadmap/Images/image-11.png)
+- ![alt text](../00_React_Roadmap/Images/image-12.png)
+- ![alt text](../00_React_Roadmap/Images/image-13.png)
 
 - `initialValue`: The initial value for the ref object, which will be stored in ref.current.
 - `ref.current`: The value held by the ref object, which you can read or update directly without causing a re-render.
@@ -76,7 +76,7 @@
 ### `Custom Hooks`:- 
 - In React, custom hooks are functions that let you reuse stateful logic across multiple components. They allow you to encapsulate and share behavior (like data fetching, form handling, animations, etc.) without the need for classes or duplicating code. Custom hooks typically start with use (following the naming convention of built-in hooks like useState and useEffect), which makes them recognizable to React and ensures they follow hook rules.
 
-![alt text](image.png)
+![alt text](../00_React_Roadmap/Images/image-14.png)
 
 - Custom hooks in React are a powerful way to simplify code and make it modular, making it easier to read, test, and maintain. You can mix and match hooks to suit any complex logic or behavior you need across different components.
 

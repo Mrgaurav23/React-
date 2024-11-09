@@ -15,11 +15,11 @@ FOR EXAMPLE -> MacOs, Windows, Linux.
 
 - Run the following code to check the Node version in command prompt.
 - $ node -version
-- ![alt text](imagecopy.png)
+- ![alt text](../00_React_Roadmap/Images/image.png)
 
 - Run the following command to check the npm version in command prompt.
 - $ npm -v
-- ![alt text](image-1.png)
+- ![alt text](../00_React_Roadmap/Images/image-1.png)
 
 - In react application,there are several files and folders in the root directory, some of them are as follows.
 ### 1. `node_module` :- It contains the React library and any other third party libraries needed.

@@ -72,6 +72,14 @@
 
 - The useRef hook is a powerful tool to manage non-rendering-related data and DOM references, adding flexibility to how you handle state and side effects in React!
 
+
+### `Custom Hooks`:- 
+- In React, custom hooks are functions that let you reuse stateful logic across multiple components. They allow you to encapsulate and share behavior (like data fetching, form handling, animations, etc.) without the need for classes or duplicating code. Custom hooks typically start with use (following the naming convention of built-in hooks like useState and useEffect), which makes them recognizable to React and ensures they follow hook rules.
+
+![alt text](image.png)
+
+- Custom hooks in React are a powerful way to simplify code and make it modular, making it easier to read, test, and maintain. You can mix and match hooks to suit any complex logic or behavior you need across different components.
+
 ### `Component`:-
 - React Js is all about components, React Js application is made up of multiple component and each component has its own logic and control. These components can be reusable which helps you to maintain the code when working on a large scale project.
 

@@ -15,7 +15,7 @@ FOR EXAMPLE -> MacOs, Windows, Linux.
 
 - Run the following code to check the Node version in command prompt.
 - $ node -version
-- ![alt text](image.png)
+- ![alt text](imagecopy.png)
 
 - Run the following command to check the npm version in command prompt.
 - $ npm -v

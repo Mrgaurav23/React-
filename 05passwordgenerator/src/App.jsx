@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState , useRef} from "react";
+import { useCallback, useEffect, useState, useRef } from "react";
 
 function App() {
   const [length, setLength] = useState(8);
@@ -21,18 +21,18 @@ function App() {
     setPassword(pass);
   }, [length, charAllowed, numberAllowed, setPassword]);
 
-  useEffect(()=>{
+  useEffect(() => {
     passwordGenerator();
-  },[length,numberAllowed,charAllowed,setPassword])
+  }, [length, numberAllowed, charAllowed, setPassword]);
 
   //useHook Ref
-  const passwordRef = useRef(null)
+  const passwordRef = useRef(null);
 
-  const copyPasswordClipBoard = useCallback(()=>{
-    passwordRef.current?.select()
-    passwordRef.current?.setSelectionRange(0,101);
-    window.navigator.clipboard.writeText(password)
-  },[password])
+  const copyPasswordClipBoard = useCallback(() => {
+    passwordRef.current?.select();
+    passwordRef.current?.setSelectionRange(0, 101);
+    window.navigator.clipboard.writeText(password);
+  }, [password]);
   return (
     <div className="w-full max-w-md max-auto shadow-md rounded-lg px-4 py-3 my-8 bg-gray-800 text-orange-500">
       <h1 className="text-center text-white my-3">PASSWORD GENERATOR</h1>
@@ -45,7 +45,10 @@ function App() {
           readOnly
           ref={passwordRef}
         />
-        <button className="outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0" onClick={copyPasswordClipBoard}>
+        <button
+          className="outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0"
+          onClick={copyPasswordClipBoard}
+        >
           Copy
         </button>
       </div>
@@ -57,7 +60,9 @@ function App() {
             max={100}
             value={length}
             className="cursor-pointer"
-            onChange={(e)=>{setLength(e.target.value)}}
+            onChange={(e) => {
+              setLength(e.target.value);
+            }}
           />
           <label>Length : {length}</label>
         </div>
@@ -66,8 +71,8 @@ function App() {
             type="checkbox"
             defaultChecked={numberAllowed}
             id="numberInput"
-            onChange={()=>{
-              setNumberAllowed((prev)=>!prev)
+            onChange={() => {
+              setNumberAllowed((prev) => !prev);
             }}
           />
           <label htmlFor="numberInput">Numbers</label>
@@ -77,8 +82,8 @@ function App() {
             type="checkbox"
             defaultChecked={charAllowed}
             id="characterInput"
-            onChange={()=>{
-              setCharAllowed((prev)=>!prev)
+            onChange={() => {
+              setCharAllowed((prev) => !prev);
             }}
           />
           <label htmlFor="characterInput">Characters</label>

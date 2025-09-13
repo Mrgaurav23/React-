@@ -18,7 +18,7 @@ const Card = ({cardName,btnText = "visit me"}) => {
       </div>
     </div>
   </div>
-    </>
+    </> 
   )
 }
 

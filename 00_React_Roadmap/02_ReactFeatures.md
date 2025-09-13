@@ -13,13 +13,53 @@
 - `Hook State`:-
 - The useState hook is a new way to declare state in functional components. It allows you to set and retrieve state values in a component without using classes. The useState() hook returns an array containing the current state and a function to update that state.
 
-![alt text](../00_React_Roadmap/Images/image-2.png)
+```jsx
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import App from './App.jsx'
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+)
+```
+
+```jsx
+import {useState} from 'react'
+
+function App(){
+    let [counter,setCounter] = useState(0);
+    let addValue = ()=>{
+        if(counter < 100){
+            setCounter(counter + 10)
+        }
+    }
+    let removeValue = ()=>{
+        if(counter > 0){
+            setCounter(counter - 10)
+        }
+    }
+    return (
+        <>
+        <h1>Counter value : {counter}</h1>
+        <button onClick = {addValue} >increment</button>
+        <button onClick = {removeValue}>decrement</button>
+        </>
+    )
+}
+
+export default App
+```
 
 - 1. ### `useState`:-
 - The useState hook is one of the fundamental hooks in React. It allows you to add state to functional components, providing a way to store and manage data that may change over time. 
 
 - `Syntax`:
-- ![alt text](../00_React_Roadmap/Images/image-5.png)
+```jsx
+import {useState} from 'react'
+const [state,setState] = useState(initialValue);
+```
 
 - `state`: The current value of the state.
 - `setState`: A function that lets you update the state. When called, it triggers a re-render of the component with the updated state.
@@ -33,24 +73,33 @@
 - The useCallback hook in React is used to memoize functions, allowing you to optimize your components by preventing unnecessary re-creations of functions. This can be particularly useful when passing functions as props to child components, as it helps avoid triggering unnecessary re-renders.
 
 - `Syntax`:
-- ![alt text](../00_React_Roadmap/Images/image-7.png)
-- ![alt text](../00_React_Roadmap/Images/image-6.png)
-
+```jsx
+const cachedFn = useCallback(fn,depencies)
+```
+```jsx
+const memorizedCallback = useCallback(()=>{
+    //Function Code Here
+},[dependencies]);
+```
 - `memoizedCallback`: The function that will be memoized.
+
 - `dependencies`: An array of dependencies that the function depends on. The memoized function will only be re-created if one of these dependencies changes.
 
-- ![alt text](../00_React_Roadmap/Images/image-8.png)
-
 - The `useCallback` hook can be a powerful tool to optimize React apps, especially when used thoughtfully to avoid unnecessary re-renders of components.
-
 
 
 - 3. ### `useEffect`:-
 - The useEffect hook in React is used to perform side effects in functional components. These side effects can include tasks like data fetching, direct DOM manipulation, setting up subscriptions, and cleaning up resources. useEffect replaces lifecycle methods like componentDidMount, componentDidUpdate, and componentWillUnmount found in class components.
 
 `Syntax`:
-- ![alt text](../00_React_Roadmap/Images/image-9.png)
-- ![alt text](../00_React_Roadmap/Images/image-10.png)
+```jsx
+useEffect(setup,dependencies?)
+```
+```jsx
+useEffect(()=>{
+    //look Password generator for better understanding
+},[dependencies])
+```
 
 - `Callback Function`: This function contains the side effect code. It runs after the component renders.
 - `Cleanup Function` (Optional): If you return a function from useEffect, it will run when the component unmounts or before the effect is re-executed.
@@ -62,11 +111,9 @@
 - 4. ### `useRef`:- 
 - The useRef hook in React provides a way to create a persistent reference to a value that doesn't trigger a re-render when it changes. This hook is commonly used to store references to DOM elements and maintain mutable values across renders.
 
-- `Syntax` :- 
-- ![alt text](../00_React_Roadmap/Images/image-11.png)
-- ![alt text](../00_React_Roadmap/Images/image-12.png)
-- ![alt text](../00_React_Roadmap/Images/image-13.png)
-
+```jsx
+const ref = useRef(initialValue)
+```
 - `initialValue`: The initial value for the ref object, which will be stored in ref.current.
 - `ref.current`: The value held by the ref object, which you can read or update directly without causing a re-render.
 

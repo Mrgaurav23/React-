@@ -123,8 +123,23 @@ const ref = useRef(initialValue)
 ### `Custom Hooks`:- 
 - In React, custom hooks are functions that let you reuse stateful logic across multiple components. They allow you to encapsulate and share behavior (like data fetching, form handling, animations, etc.) without the need for classes or duplicating code. Custom hooks typically start with use (following the naming convention of built-in hooks like useState and useEffect), which makes them recognizable to React and ensures they follow hook rules.
 
-![alt text](../00_React_Roadmap/Images/image-14.png)
+```jsx 
+//currecy convertor for better understanding Custom Hooks
+import {useEffect,useState} from 'react'
 
+function useCurrencyInfo(currency){
+    const [data,setData] = useState({});
+    useEffect(()=>{
+        fetch(`https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${currency}.json`).then((res)=>res.json())
+        .then((res)=>setData(res[currency]))
+        console.log(data)
+    },[currency]);
+    console.log(data)
+    return data;
+}
+
+export default useInfoCurrency;
+```
 - Custom hooks in React are a powerful way to simplify code and make it modular, making it easier to read, test, and maintain. You can mix and match hooks to suit any complex logic or behavior you need across different components.
 
 ### `Component`:-

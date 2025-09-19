@@ -112,7 +112,6 @@ function Example(){
   )
 }
 ```
-  ![alt text](../00_React_Roadmap/Images/image-26.png)
 
 3. ## `Key Fragments`:
 
@@ -128,4 +127,3 @@ function ItemList({items}){
   ));
 }
 ```
-  ![alt text](../00_React_Roadmap/Images/image-27.png)
